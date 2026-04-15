@@ -1,8 +1,10 @@
 # BAE305_Project_OnlineDesignFile
-Colliding Plant's Plant Mountouring System Group Project 
+Colliding Planets Group
+Plant Montoring System Group Project 
+BAE 305 Spring 2026
 
 Members:
-Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, Ada Lasley
+Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 
 ## Summary
 
