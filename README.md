@@ -4,7 +4,7 @@ Colliding Plant's Plant Mountouring System Group Project
 Members:
 Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, Ada Lasley
 
-## Summery
+## Summary
 
 ## Design Decision Discussion
 
