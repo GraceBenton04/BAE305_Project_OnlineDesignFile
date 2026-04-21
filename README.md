@@ -34,9 +34,18 @@ Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 
 ## Project Setup and Schematics 
 ### Project Base
+Below is the construction process for the base of the plant monitoring system, designed to support all additional system components.
 
 [![PDF Preview](./BAE305_Project_Base_Drawing_Image.png)](./BAE305_Project_Drawing.pdf)
 *Click the image above to view the full PDF drawing.*
+
+The main base was made from a walnut board that was first planed to a thickness of 7/8 inch. It was then cut to 13 inches in length using the chop saw. One edge was jointed to create a straight reference edge, and the board was then cut on the table saw to a final width of 8.5 inches.
+
+The remaining walnut board was then planed to a thickness of 3/4 inch. From this material, two pieces were cut to 7.5 inches in length using the chop saw. Both pieces were jointed on one edge and then cut on the table saw, with one piece finished to 8.5 inches wide and the other finished to 5 inches wide.
+
+Next, another board section was cut to 8.5 inches in length and then ripped into three strips, each measuring 1.5 inches wide. Two of these strips were then cut down to 6.5 inches in length.
+
+Once all pieces were prepared, they were arranged according to the base design drawing. The assembly was secured using Torx head screws. Two screws were used per piece from the bottom for structural support, and one additional screw was used to secure the T-shaped support section together.
 
 ### Adurino Board 1: Tempature Sensor and Screen
 
