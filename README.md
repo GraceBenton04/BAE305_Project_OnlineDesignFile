@@ -15,11 +15,11 @@ Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 - 11 Torx Head Screws
 - 2 SPARKFUN REDBOARDS
 - 1 Breadboard
-- 6 in of 3/4 in wide Velcro Tape
+- 6 $in$ of 3/4 $in$ wide Velcro Tape
 - 2  four AA Backery Holder
 - 1 eight AA 12V Battery Holder
-- ?? in of clear 3/16 in Tubing
-- ?? of 1/4 in Emitter Tubing
+- ?? in of clear 3/16 $in$ Tubing
+- ?? of 1/4 $in$ Emitter Tubing
 - 1 Anolog Soil Moisture Sensor
 - 1 2.5L Storage Conatainer 
 - 1 DC 12V Diaphram Pump
