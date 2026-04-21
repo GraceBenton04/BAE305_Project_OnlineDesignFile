@@ -11,7 +11,7 @@ Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 ## Design Decision Discussion
 
 ## Materials 
-- 571 in^2 of Walnut Wood
+- 571 $in^2$ of Walnut Wood
 - 11 Torx Head Screws
 - 2 SPARKFUN REDBOARDS
 - 1 Breadboard
