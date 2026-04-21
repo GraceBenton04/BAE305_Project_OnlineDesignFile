@@ -33,6 +33,10 @@ Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 - 3 Pushbuttons
 
 ## Project Setup and Schematics 
+### Project Base
+
+[![PDF Preview](./BAE305_Project_Base_Drawing_Image.png)](./BAE305_Project_Drawing.pdf)
+*Click the image above to view the full PDF drawing.*
 
 ### Adurino Board 1: Tempature Sensor and Screen
 
