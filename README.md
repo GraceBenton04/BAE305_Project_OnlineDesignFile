@@ -11,6 +11,23 @@ Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 ## Design Decision Discussion
 
 ## Materials 
+- 571 in^2 of Walnut Wood
+- 2 SPARKFUN REDBOARDS
+- 2  four AA Backery Holder
+- 1 eight AA 12V Battery Holder
+- ?? in of clear 3/16 in Tubing
+- ?? of 1/4 in Emitter Tubing
+- 1 Anolog Soil Moisture Sensor
+- 1 2.5L Storage Conatainer 
+- 1 DC 12V Diaphram Pump
+- 4 10K Ohm Resistors
+- 1 12VDC 1 CHANNEL RELAY Module 
+- 1  RGB LED
+- 1 I2C Serial Interface Adapter Module 
+- 1 16x2 LCD Display Screen
+- 1 10K Ohm Thermistor 
+- 1 Piezo Buzzer
+- 3 Pushbuttons
 
 ## Project Setup and Schematics 
 
