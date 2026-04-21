@@ -12,7 +12,10 @@ Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 
 ## Materials 
 - 571 in^2 of Walnut Wood
+- 11 Torx Head Screws
 - 2 SPARKFUN REDBOARDS
+- 1 Breadboard
+- 6 in of 3/4 in wide Velcro Tape
 - 2  four AA Backery Holder
 - 1 eight AA 12V Battery Holder
 - ?? in of clear 3/16 in Tubing
