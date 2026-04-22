@@ -68,19 +68,10 @@ The complete schematic, wiring diagram, and code for Board 1 provide all electri
 [![Board 1 Temperature Wiring Diagram](./Wire_Diagram_Board1_Temp.png)](./Wire_Diagram_Board1_Temp.png)
 *Figure 4. Physical wiring diagram for Board 1 showing the full component layout and breadboard connections for the temperature monitoring system with LCD display, pushbuttons, piezo buzzer, and thermistor.*
 
-<details>
-<summary><strong>Board 1 Arduino Code – Temperature Monitoring System</strong></summary>
+<strong>Board 1 Arduino Code – Temperature Monitoring System</strong>
 
-[Click here to view the full code file](./BAE305_Board1_Tempature_Code)
+[Click here to view the code file](./BAE305_Board1_Tempature_Code)
 
-This code controls:
-- Temperature sensor readings
-- LCD screen display output
-- Pushbutton user input
-- Piezo buzzer alerts
-- System monitoring and user interaction
-
-</details>
 
 ### Audurino Board 2: Mositure Sensor and Water Pump
 
