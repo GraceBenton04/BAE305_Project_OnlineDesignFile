@@ -68,8 +68,7 @@ The complete schematic, wiring diagram, and code for Board 1 provide all electri
 [![Board 1 Temperature Wiring Diagram](./Wire_Diagram_Board1_Temp.png)](./Wire_Diagram_Board1_Temp.png)
 *Figure 4. Physical wiring diagram for Board 1 showing the full component layout and breadboard connections for the temperature monitoring system with LCD display, pushbuttons, piezo buzzer, and thermistor.*
 
-<strong>Board 1 Arduino Code – Temperature Monitoring System</strong>
-
+*Board 1 Arduino Code – Temperature Monitoring System*
 [Click here to view the code file](./BAE305_Board1_Tempature_Code)
 
 
@@ -85,11 +84,8 @@ The complete schematic, wiring diagram, and code for Board 2 provide the necessa
 [![Board 2 Moisture Wiring Diagram](./Wire_Diagram_Board2_Moisture.png)](./Wire_Diagram_Board2_Moisture.png)
 *Figure 3. Physical wiring diagram for Board 2 showing the full component layout and breadboard connections for the soil moisture monitoring and automatic watering system.*
 
- *Code for Board 2*
-
-```cpp
-
-```
+ *Board 2 Arduino Code – Moisture Monitoring and Watering System*
+[Click here to view the code file](./incertname of file here)
 
 ## Test Results Discussion
 
