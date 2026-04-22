@@ -45,7 +45,7 @@ The remaining walnut board was then planed to a thickness of 3/4 inch. From this
 
 Next, another board section was cut to 8.5 inches in length and then ripped into three strips, each measuring 1.5 inches wide. Two of these strips were then cut down to 6.5 inches in length.
 
-Once all pieces were prepared, they were arranged according to the base design drawing. The assembly was secured using Torx head screws. Two screws were used per piece from the bottom for structural support, and one additional screw was used to secure the T-shaped support section together.
+Once all pieces were prepared, they were arranged according to the base design drawing. The assembly was secured using Torx head screws. Two screws were used per piece from the bottom for structural support, and one additional screw was used to secure the T-shaped support section together. Then, a hole was drilled with a hand drill and 1/4 $in$ bit in the corner of the lid 1 1/4 $in$ from both sides. 
 
 ### Adurino Board 1: Tempature Sensor and Screen
 
