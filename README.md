@@ -1,9 +1,13 @@
 # BAE305_Project_OnlineDesignFile
+
 Colliding Planets Group
-Plant Montoring System Group Project 
+
+Plant Montoring System Project 
+
 BAE 305 Spring 2026
 
 Members:
+
 Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 
 ## Summary
@@ -54,9 +58,9 @@ Once all pieces were prepared, they were arranged according to the base design d
 
 ### Adurino Board 1: Tempature Sensor and Screen
 
-Board 1 is responsible for temperature monitoring and user interaction. This board includes a 10KΩ thermistor temperature sensor, a 10KΩ resistor, 16x2 LCD display, I2C Serial Interface Adapter Module, three pushbuttons, four AA Backery Pack and a piezo buzzer. Using the three pushbuttons the user will input the ideal tempature rang for thier plant. Pushbutton 2 is up by 0.5 degrees Farnhit, pushbutton 3 is down by 0.5 degrees farnhight, and pushbutton 1 uploads imputed temputure range to adurino board. The thermistor continuously measures ambient temperature and sends analog input data to the Arduino RedBoard. The Arduino processes this data and displays both the current temperature readings and inputed range. The piezo buzzer provides audible alerts when temperature goes outside of inputed range. This board serves as the main user interface for the plant monitoring system, allowing real-time monitoring of plant conditions while providing feedback through both visual and audible outputs.
+Board 1 is responsible for temperature monitoring and user interaction. This board includes a 10KΩ thermistor temperature sensor, a 10KΩ resistor, 16x2 LCD display, I2C Serial Interface Adapter Module, three pushbuttons, Backery Pack that holds 4 AAs and a piezo buzzer. Using the three pushbuttons the user will input the ideal tempature rang for thier plant. Pushbutton 2 is up by 0.5 degrees Farnhit, pushbutton 3 is down by 0.5 degrees farnhight, and pushbutton 1 uploads imputed temputure range to adurino board. The thermistor continuously measures ambient temperature and sends analog input data to the Arduino RedBoard. The Arduino processes this data and displays both the current temperature readings and inputed range. The piezo buzzer provides audible alerts when temperature goes outside of inputed range. This board serves as the main user interface for the plant monitoring system, allowing real-time monitoring of plant conditions while providing feedback through both visual and audible outputs.
 
-The complete schematic and wiring diagram for Board 1 provide the necessary documentation for full system assembly and technician implementation.
+The complete schematic, wiring diagram, and code for Board 1 provide all electrical connections and programming necessary for proper assembly, and system operation.
 
 [![Board 1 Temperature Schematic](./BAE305_Schematic_Board1_Tempature.drawio.png)](./BAE305_Schematic_Board1_Tempature.drawio.png)
 *Figure 1. Circuit schematic for Board 1 showing the temperature monitoring system with LCD display, pushbuttons, piezo buzzer, thermistor, and resistor connections.*
@@ -66,29 +70,16 @@ The complete schematic and wiring diagram for Board 1 provide the necessary docu
 
 ### Audurino Board 2: Mositure Sensor and Water Pump
 
-demistration 30 sec betweeen rreading and normally every 10 mins and and waits 1 min after watering in done to start reading again. watering happens for 5 seconds for demontration but normally is 10 seconds.
+Board 2 is responsible for monitoring soil moisture levels and controlling the automatic watering system. This board uses an anolog soil moisture sensor, RGB LED common cathode, 12V DC 1 channel relay module, DC 12V Diaphram Pump, and external eight AA 12V Battery Pack, 4 10KΩ Resistors, and Backery Pack that holds 4 AAs. For the demonstration, the soil moisture sensor checks the soil moisture every 30 seconds and sends this information to the Arduino RedBoard, although during normal operation it takes readings every 10 minutes. Based on the moisture reading, the system determines whether watering is needed and activates the proper visual indicator using the RGB LED. After watering is completed, the soil moisture sensor waits 1 minute before taking another moisture reading. For demonstration purposes, the plant is watered for 5 seconds, while under normal operation the watering cycle runs for 10 seconds. The RGB LED common cathode is used to comunicate the state of the system to the user. The LED color indicates the following: Green LED = Soil moisture is at an acceptable level and the plant is sufficiently watered, Blue LED = The system is actively watering the plant using the diaphragm pump, Red LED = The soil moisture sensor has detected dry soil for an extended period of time, indicating the water reservoir is likely empty or low. When dry soil is detected, the Arduino sends a signal to the relay module, which controls power to the 12V diaphragm pump. The relay allows the low-voltage Arduino board to safely control the higher voltage pump system. The pump then delivers water to the plant until the moisture level is restored.
 
-Board 2 is responsible for monitoring soil moisture levels and controlling the automatic watering system. This board uses an Anolog Soil Moisture Sensor, RGB LED Common Cathode, 12VDC 1 CHANNEL RELAY Module, DC 12V Diaphram Pump, and external eight AA 12V Battery Pack, 4 10KΩ Resistors, and four AA Backery Pack.
-
-The soil moisture sensor continuously reads the moisture content of the soil and sends this information to the Arduino RedBoard. Based on the moisture reading, the system determines whether watering is needed and activates the proper visual indicator using the RGB LED.
-
-The LED color system is used as follows:
-
-Green LED = Soil moisture is at an acceptable level and the plant is sufficiently watered
-Yellow LED = The system is actively watering the plant using the diaphragm pump
-Red LED = The soil moisture sensor has detected dry soil for an extended period of time, indicating the water reservoir is likely empty or low
-
-When dry soil is detected, the Arduino sends a signal to the relay module, which controls power to the 12V diaphragm pump. The relay allows the low-voltage Arduino board to safely control the higher voltage pump system. The pump then delivers water to the plant until the desired moisture level is restored.
-
-The full schematic and wiring diagram for Board 1 provide complete electrical connections for assembly and troubleshooting.
+The complete schematic, wiring diagram, and code for Board 2 provide the necessary electrical connections, programming, and documentation for full system assembly, and operation.
 
 [![Board 2 Moisture Schematic](./BAE305_Schematic_Board2_Moisture.drawio.png)](./BAE305_Schematic_Board2_Moisture.drawio.png)
 *Figure 2. Circuit schematic for Board 2 showing the soil moisture monitoring system with RGB LED, soil moisture sensor, relay module, diaphragm pump, and battery pack connections.*
 
 [![Board 2 Moisture Wiring Diagram](./Wire_Diagram_Board2_Moisture.png)](./Wire_Diagram_Board2_Moisture.png)
 *Figure 3. Physical wiring diagram for Board 2 showing the full component layout and breadboard connections for the soil moisture monitoring and automatic watering system.*
-
-### Physical Setup 
+ 
 
 ## Test Results Discussion
 
