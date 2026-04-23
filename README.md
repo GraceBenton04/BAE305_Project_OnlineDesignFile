@@ -13,35 +13,39 @@ Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 ## Summary
 
 ## Materials 
-- 571 $in^2$ of Walnut Wood
-- 11 Torx Head Screws
-- 2 SPARKFUN REDBOARDS
-- 1 Breadboard
-- 6 $in$ of 3/4 $in$ wide Velcro Tape
-- 2  four AA Backery Pack
-- 1 eight AA 12V Battery Holder
-- Clear 3/16 $in$ Inner Diameter Tubing
-- 1/4 $in$ Emitter Tubing
-- 1 Anolog Soil Moisture Sensor
-- 1 2.5L Storage Conatainer 
-- 1 DC 12V Diaphram Pump
-- 5 10KΩ Resistors
-- 1 12VDC 1 CHANNEL RELAY Module 
-- 1  RGB LED COmmon Cathode
-- 1 I2C Serial Interface Adapter Module 
-- 1 16x2 LCD Display Screen
-- 1 10KΩ Thermistor 
-- 1 Piezo Buzzer
-- 3 Pushbuttons
+
+| Material / Component | Quantity |
+|---|---:|
+| Walnut Wood | 571 in² |
+| Torx Head Screws | 11 |
+| SparkFun RedBoards | 2 |
+| Breadboard | 1 |
+| Velcro Tape (3/4 in wide) | 6 in |
+| 4-AA Battery Packs | 2 |
+| 8-AA 12V Battery Holder | 1 |
+| Clear Tubing (3/16 in Inner Diameter) | As Needed |
+| Emitter Tubing (1/4 in) | As Needed |
+| Analog Soil Moisture Sensor | 1 |
+| 2.5 L Storage Container | 1 |
+| DC 12V Self-Priming Diaphragm Pump | 1 |
+| 10 kΩ Resistors | 5 |
+| 12VDC 1-Channel Relay Module | 1 |
+| RGB LED (Common Cathode) | 1 |
+| I2C Serial Interface Adapter Module | 1 |
+| 16x2 LCD Display Screen | 1 |
+| 10 kΩ Thermistor | 1 |
+| Piezo Buzzer | 1 |
+| Pushbuttons | 3 |
 
 ## Project Setup and Schematics 
 
 The plant monitoring system is designed using two separate Arduino-based control boards to independently manage temperature monitoring and soil moisture monitoring with a 
-container to hold the water. All Compents are togeahter on base and held in place with velco tape. The system will sit next to the plant it will monitor with the emitter 
-tubing wraping around the base of the plant and the soil moistor sensor in the pot.
+container to hold the water. The system will sit next to the plant it will monitor with the emitter tubing wraping around the base of the plant and the soil moistor sensor in 
+the pot.
 
 ### Base
-Below is the construction process for the base of the plant monitoring system, designed to support all additional system components.
+
+Below is the construction overveiw for the base of the plant monitoring system, designed to support all additional system components.
 
 [![PDF Preview](./BAE305_Project_Base_Drawing_Image.png)](./BAE305_Project_Drawing.pdf)
 *Click the image above to view the full PDF drawing.*
@@ -97,23 +101,48 @@ connections.*
 
 ## Design Decision Discussion
 
-using I2C communication, which reduces wiring complexity by only requiring four connections: VCC, GND, SDA, and SCL.
-
 The self-watering plant monitoring system was designed to meet all required project objectives while remaining simple to assemble, reliable for long-term use, and practical 
-for everyday indoor plant care.The system was divided into two separate Arduino-based control boards: one dedicated to watering and soil moisture monitoring, and the other 
-dedicated to temperature monitoring and user interaction. This separation improved organization, simplified troubleshooting, and allowed each subsystem to operate 
-independently without interfering with the other.
+for everyday indoor plant care. The team decided goals and objective are as follows: device must be able to determine if soil is wet or dry, device must be able 
+to automatically dispense water when it determines soil is dry, device must indicate watering system status to user, user must be able to input an acceptable temperature 
+range, and device will alert user if ambient air temperature is outside of the inputted temperature range. To achive the objectives the system was divided into two separate 
+Arduino-based control boards: one dedicated to watering and soil moisture monitoring, and the other dedicated to temperature monitoring and user interaction. This separation 
+improved organization, simplified troubleshooting, and allowed each subsystem to operate independently without interfering with the other.
 
 ### Adurino Board 1: Tempature Sensor and Screen
 
-Using the three pushbuttons the user will input the ideal tempature rang 
-for thier plant. Pushbutton 2 is up by 0.5 degrees Farnhit, pushbutton 3 is down by 0.5 degrees farnhight, and pushbutton 1 uploads imputed temputure range to adurino board. 
-The thermistor continuously measures ambient temperature and sends analog input data to the Arduino RedBoard. The Arduino processes this data and displays both the current 
-temperature readings and inputed range. The piezo buzzer provides audible alerts when temperature goes outside of inputed range. This board serves as the main user interface 
-for the plant monitoring system, allowing real-time monitoring of plant conditions while providing feedback through both visual and audible outputs.
+Temperature Sensing:
+A thermistor was selected as the temperature sensor because the team had previously used thermistors in earlier Arduino labs and had existing experience with both the wiring 
+and programming required. The thermistor was also included in the Arduino kits already available for the project, making it a practical and cost-effective option. Its simple 
+circuit design and reliable analog readings made it an effective choice for monitoring plant temperature conditions.
+
+User Interface:
+A 16x2 LCD screen with an I2C Serial Interface Adapter Module was selected to display temperature readings and user settings. The I2C adapter greatly simplified the wiring by 
+reducing the number of required connections to only four wires: power, ground, SDA, and SCL. This reduced circuit complexity and made assembly cleaner and easier to 
+troubleshoot.Three pushbuttons were used for user input: One button to select the parameter, one to increase the value, and the other to decrease the value. These buttons 
+allow the user to set both the minimum and maximum acceptable temperature range for the plant. The team chose pushbuttons instead of a full keypad because only two numerical 
+values needed adjustment. A keypad would have added unnecessary complexity to both the wiring and programming. The three-button system created a simpler, cleaner, and more 
+efficient design. The team also chose a physical screen and button interface instead of using a computer or phone application. A computer-based system would require the user 
+to connect an external device each time they wanted to adjust settings, making the process inconvenient. A phone application was also avoided because many app systems are 
+better supported on Android devices and could limit accessibility for Apple users. The onboard screen and button system made the device fully self-contained and easier for 
+any user to operate.
+
+Alert System:
+A piezo buzzer was selected to alert the user when the measured temperature moves outside the selected acceptable range. The buzzer was included in the Arduino kits and had 
+also been used in previous coursework, so the team was already familiar with its wiring and programming. This made implementation simple while providing an effective audible 
+warning system for the user.
+
+System Operation and Control Decisions:
+Using the three pushbuttons the user will input the ideal tempature rang for thier plant. Pushbutton 2 is up by 0.5 degrees Farnhit, pushbutton 3 is down by 0.5 degrees 
+farnhight, and pushbutton 1 uploads imputed temputure range to adurino board. The thermistor continuously measures ambient temperature and sends analog input data to the 
+Arduino RedBoard. The Arduino processes this data and displays both the current temperature readings and inputed range. The piezo buzzer provides audible alerts when 
+temperature goes outside of inputed range. This board serves as the main user interface for the plant monitoring system, allowing real-time monitoring of plant conditions 
+while providing feedback through both visual and audible outputs.
+
+*Note: Cami and Evie I think i got it good on the operation but please add or change to what you guys want. if there is any more explaination that could be given on why we 
+want it coded or run this way please add to the above section or sections if it is better explained on why we chose to use that compent in the circut.**please deleate this 
+after it is done*
 
 ### Audurino Board 2: Mositure Sensor and Water Pump
-
 
 Water Delivery Method:
 For the watering system, a 12V DC self-priming diaphragm pump was selected as the water delivery method. The Arduino sends commands to the pump to activate watering when the 
@@ -138,31 +167,50 @@ Analog readings also allowed the team to create threshold values for dry, moist,
 
 User Status Indicators:
 An RGB common cathode LED was selected to communicate system status to the user. The team wanted the user to quickly understand whether the plant was properly watered, 
-actively being watered, or if the system detected a problem such as a low water tank.
-
-The LED color indicators were designed as follows:
-
-Green = Soil moisture is at an acceptable level
-Yellow = The system is actively watering the plant
-Red = Dry soil has been detected for an extended period of time, indicating the water reservoir is likely empty or low
-
-Using one RGB LED allowed all three colors to be displayed using a single component instead of wiring three separate LEDs, reducing wiring complexity and improving overall design simplicity.
+actively being watered, or if the system detected a problem such as a low water tank. The LED color indicators were designed as follows: Green LED = Soil moisture is at an 
+acceptable level and the plant is sufficiently watered, Blue LED = The system is actively watering the plant using the diaphragm pump, Red LED = The soil moisture sensor has 
+detected dry soil for an extended period of time, indicating the water reservoir is likely empty or low. Using one RGB LED allowed all three colors to be displayed using a 
+single component instead of wiring three separate LEDs, reducing wiring complexity and improving overall design simplicity.
 
 Extra Power Supply:
-A 12V battery pack was selected because the diaphragm pump required 12V power for proper operation. This allowed the pump to operate independently from the Arduino’s lower voltage system while still being controlled through the circuit.
+A 12V battery pack was selected because the diaphragm pump required 12V power for proper operation. This allowed the pump to operate independently from the Arduino’s lower 
+voltage system while still being controlled through the circuit.
 
 System Operation and Control Decisions:
+For the demonstration, the soil moisture sensor checks the soil moisture every 30 seconds and sends this information to the Arduino RedBoard, although during normal operation 
+it takes readings every 10 minutes. Based on the moisture reading, the system determines whether watering is needed and activates the proper visual indicator using the RGB 
+LED. After watering is completed, the soil moisture sensor waits 1 minute before taking another moisture reading. For demonstration purposes, the plant is watered for 5 
+seconds, while under normal operation the watering cycle runs for 10 seconds. When dry soil is detected, the Arduino sends a signal to the relay module, which controls power 
+to the 12V diaphragm pump. The relay allows the low-voltage Arduino board to safely control the higher voltage pump system. The pump then delivers water to the plant until 
+the moisture level is restored.
 
-*Note : Add explanation for why the relay module was selected and how it protects the Arduino while controlling the 12V pump.*
+*Note: Ada when you where talking about how and when the water runs wiht when is sens with the senor this is where u eaplin it in the System Operation and Control Decisions 
+above. Wether you keep the wording I wrote while u where talking idc but I woudl keep a note on what we changeit do for our dementration. **please deleate this after it is 
+done*
 
 ### Base
+
+The base was designed to hold all components securely while keeping the entire system compact, organized, and easy to move as one unit. The team wanted the system to sit flat 
+next to the plant, allow easy access to the screen and buttons, and keep the water reservoir separated from the electronics for safety. Because there were two separate 
+Arduino boards, the base needed to hold both boards without becoming overly large. The team also wanted the system to be easy to pick up and move as one complete unit while 
+allowing the water tank to be removed separately for refilling. A tray-style base design was selected to support all components. To prevent the tank from sliding, a short 
+outer wall was added. This wall was kept at only 1.5 inches tall so the tank could still be easily removed.To separate the water reservoir from the electronics and hold both 
+Arduino boards upright, the team designed a T-shaped divider system. The top section of the T extends higher than the water tank to act as a splash barrier between the water 
+and electronics. The vertical section of the T inside the tray allows one Arduino board to be mounted on each side.Board 1, watering system, was positioned closest to the 
+plant because it contains the pump connections, tubing, and soil moisture sensor. Board 2, temperature monitoring and user interface, was placed on the outward-facing side so 
+the user could easily view the LCD screen and access the pushbuttons for temperature input. All componets except the water tank are hled in place iwht velcro tape. This 
+layout improved safety, usability, and maintenance while keeping the full system compact and organized.
 
 ## Test Results Discussion
 
  *This is a note get ride of it when section is complete* 
  *here is what the rubric says this section is: Could another test engineer replicate your tests? All test equipment specified (model numbers) and procedures fully described. 
  In this section can each of you say how you tested and debuged the code to get the final working code with the system. Ada for yours maybe more detail or hwo you know the 
- water pump was working?*
+ water pump was working? and def. some info of how you tested reading the data of the sensor and knowing how it outputed its data to then use in the code?*
+*Grace thinks: My understanding is that we have the layouts and desin and the defense of why we chose to use what and do what now in this section it is explaining what went 
+wrong or hickups to making it do want we wanted to and then also how did we make sure it ran they way we wanted it.*
+*If any one has photos of you testing somthing that would be great to add in too! if not its ok this thing is getting long lol*
+*put ur info in the desinated board section below*
  
 ### Adurino Board 1: Tempature Sensor and Screen
 
