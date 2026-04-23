@@ -12,6 +12,18 @@ Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 
 ## Summary
 
+The Plant Monitoring System was designed to automatically water indoor plants while also monitoring ambient temperature. The system meets all project objectives by detecting 
+soil moisture, dispensing water when soil is dry, providing LED status indicators, allowing the user to set an acceptable temperature range, and alerting the user when the 
+temperature moves outside that range.
+
+The project uses two Arduino-based control boards. Board 1 manages temperature monitoring with a thermistor, LCD screen, pushbuttons, and piezo buzzer. Board 2 controls soil 
+moisture monitoring and watering using a moisture sensor, RGB LED, relay, diaphragm pump, and water reservoir. A custom walnut base was built to securely hold all components 
+while separating the water tank from the electronics for safety.
+
+Testing showed the system successfully detected dry soil, activated watering, and stopped once proper moisture levels were reached. The temperature system also correctly 
+displayed readings and activated the buzzer when temperatures moved outside the selected range. Overall, the project successfully created a reliable and practical self-
+watering plant monitoring system.
+
 ## Materials 
 
 | Material / Component | Quantity |
