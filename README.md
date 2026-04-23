@@ -144,7 +144,7 @@ Arduino RedBoard. The Arduino processes this data and displays both the current 
 temperature goes outside of inputed range. This board serves as the main user interface for the plant monitoring system, allowing real-time monitoring of plant conditions 
 while providing feedback through both visual and audible outputs.
 
-*Note: Cami and Evie I think i got it good on the operation but please add or change to what you guys want. if there is any more explaination that could be given on why we 
+> *Note: Cami and Evie I think i got it good on the operation but please add or change to what you guys want. if there is any more explaination that could be given on why we 
 want it coded or run this way please add to the above section or sections if it is better explained on why we chose to use that compent in the circut.**please deleate this 
 after it is done*
 
@@ -190,7 +190,7 @@ seconds, while under normal operation the watering cycle runs for 10 seconds. Wh
 to the 12V diaphragm pump. The relay allows the low-voltage Arduino board to safely control the higher voltage pump system. The pump then delivers water to the plant until 
 the moisture level is restored.
 
-*Note: Ada when you where talking about how and when the water runs wiht when is sens with the senor this is where u eaplin it in the System Operation and Control Decisions 
+> *Note: Ada when you where talking about how and when the water runs wiht when is sens with the senor this is where u eaplin it in the System Operation and Control Decisions 
 above. Wether you keep the wording I wrote while u where talking idc but I woudl keep a note on what we changeit do for our dementration. **please deleate this after it is 
 done*
 
@@ -209,14 +209,14 @@ layout improved safety, usability, and maintenance while keeping the full system
 
 ## Test Results Discussion
 
- *This is a note get ride of it when section is complete* 
- *here is what the rubric says this section is: Could another test engineer replicate your tests? All test equipment specified (model numbers) and procedures fully described. 
- In this section can each of you say how you tested and debuged the code to get the final working code with the system. Ada for yours maybe more detail or hwo you know the 
- water pump was working? and def. some info of how you tested reading the data of the sensor and knowing how it outputed its data to then use in the code?*
-*Grace thinks: My understanding is that we have the layouts and desin and the defense of why we chose to use what and do what now in this section it is explaining what went 
-wrong or hickups to making it do want we wanted to and then also how did we make sure it ran they way we wanted it.*
-*If any one has photos of you testing somthing that would be great to add in too! if not its ok this thing is getting long lol*
-*put ur info in the desinated board section below*
+ > *This is a note get ride of it when section is complete* 
+ > *here is what the rubric says this section is: Could another test engineer replicate your tests? All test equipment specified (model numbers) and procedures fully described. 
+ > In this section can each of you say how you tested and debuged the code to get the final working code with the system. Ada for yours maybe more detail or hwo you know the 
+>  water pump was working? and def. some info of how you tested reading the data of the sensor and knowing how it outputed its data to then use in the code?*
+> *Grace thinks: My understanding is that we have the layouts and desin and the defense of why we chose to use what and do what now in this section it is explaining what went 
+> wrong or hickups to making it do want we wanted to and then also how did we make sure it ran they way we wanted it.*
+> *If any one has photos of you testing somthing that would be great to add in too! if not its ok this thing is getting long lol*
+> *put ur info in the desinated board section below*
  
 ### Adurino Board 1: Tempature Sensor and Screen
 
