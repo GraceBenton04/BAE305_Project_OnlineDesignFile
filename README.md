@@ -41,14 +41,24 @@ Grace Benton, Evie Hamliton, Cami Morgan, Allison Lundy, and Ada Lasley
 
 The plant monitoring system is designed using two separate Arduino-based control boards to independently manage temperature monitoring and soil moisture monitoring with a 
 container to hold the water. The system will sit next to the plant it will monitor with the emitter tubing wraping around the base of the plant and the soil moistor sensor in 
-the pot.
+the pot as shown in figures below.
+
+![Total Project Setup](./BAE305_Total_Project_Setup.jpg)
+
+*Figure 1. Complete plant monitoring system showing both Arduino boards, water reservoir, tubing, and mounted components.*
+
+![Total Project Setup Top View](./BAE305_Total_Project_Setup_TopView.jpg)
+
+*Figure 2. Top view of the complete plant monitoring system layout showing component placement and system organization.*
+
 
 ### Base
 
 Below is the construction overveiw for the base of the plant monitoring system, designed to support all additional system components.
 
 [![PDF Preview](./BAE305_Project_Base_Drawing_Image.png)](./BAE305_Project_Drawing.pdf)
-*Click the image above to view the full PDF drawing.*
+
+*Figure 3. Click the image above to view the full PDF drawing.*
 
 The main base was made from a walnut board that was first planed to a thickness of 7/8 inch. It was then cut to 13 inches in length using the chop saw. One edge was jointed 
 to create a straight reference edge, and the board was then cut on the table saw to a final width of 8.5 inches.
@@ -65,6 +75,10 @@ bit in the corner of the lid 1 1/4 $in$ from both sides.
 
 ### Adurino Board 1: Tempature Sensor and Screen
 
+![Board 1 Setup](./BAE305_Board1_Setup_Image.jpg)
+
+*Figure 4. Board 1 setup showing the temperature monitoring system with the LCD screen, thermistor, pushbuttons, and piezo buzzer.*
+
 Board 1 is responsible for temperature monitoring and user interaction. This board includes a 10KΩ thermistor temperature sensor, a 10KΩ resistor, 16x2 LCD display, I2C 
 Serial Interface Adapter Module, three pushbuttons, Backery Pack that holds 4 AAs and a piezo buzzer.
 
@@ -72,11 +86,11 @@ The complete schematic, wiring diagram, and code for Board 1 provide all electri
 
 [![Board 1 Temperature Schematic](./BAE305_Schematic_Board1_Tempature.drawio.png)](./BAE305_Schematic_Board1_Tempature.drawio.png)
 
-*Figure 1. Circuit schematic for Board 1 showing the temperature monitoring system with LCD display, pushbuttons, piezo buzzer, thermistor, and resistor connections.*
+*Figure 5. Circuit schematic for Board 1 showing the temperature monitoring system with LCD display, pushbuttons, piezo buzzer, thermistor, and resistor connections.*
 
 [![Board 1 Temperature Wiring Diagram](./Wire_Diagram_Board1_Temp.png)](./Wire_Diagram_Board1_Temp.png)
 
-*Figure 4. Physical wiring diagram for Board 1 showing the full component layout and breadboard connections for the temperature monitoring system with LCD display, 
+*Figure 6. Physical wiring diagram for Board 1 showing the full component layout and breadboard connections for the temperature monitoring system with LCD display, 
 pushbuttons, piezo buzzer, and thermistor.*
 
 *Board 1 Arduino Code – Temperature Monitoring System*
@@ -86,6 +100,10 @@ pushbuttons, piezo buzzer, and thermistor.*
 
 ### Audurino Board 2: Mositure Sensor and Water Pump
 
+![Board 2 Setup](./BAE305_Board2_Setup.jpg)
+
+*Figure 7. Board 2 setup showing the watering system with the soil moisture sensor, relay, RGB LED, and pump connections.*
+
 Board 2 is responsible for monitoring soil moisture levels and controlling the automatic watering system. This board uses an anolog soil moisture sensor, RGB LED common 
 cathode, 12V DC 1 channel relay module, DC 12V Diaphram Pump, and external eight AA 12V Battery Pack, 4 10KΩ Resistors, and Backery Pack that holds 4 AAs.
 
@@ -94,12 +112,12 @@ operation.
 
 [![Board 2 Moisture Schematic](./BAE305_Schematic_Board2_Moisture.drawio.png)](./BAE305_Schematic_Board2_Moisture.drawio.png)
 
-*Figure 2. Circuit schematic for Board 2 showing the soil moisture monitoring system with RGB LED, soil moisture sensor, relay module, diaphragm pump, and battery pack 
+*Figure 8. Circuit schematic for Board 2 showing the soil moisture monitoring system with RGB LED, soil moisture sensor, relay module, diaphragm pump, and battery pack 
 connections.*
 
 [![Board 2 Moisture Wiring Diagram](./Wire_Diagram_Board2_Moisture.png)](./Wire_Diagram_Board2_Moisture.png)
 
-*Figure 3. Physical wiring diagram for Board 2 showing the full component layout and breadboard connections for the soil moisture monitoring and automatic watering system.*
+*Figure 9. Physical wiring diagram for Board 2 showing the full component layout and breadboard connections for the soil moisture monitoring and automatic watering system.*
 
  *Board 2 Arduino Code – Moisture Monitoring and Watering System*
  
@@ -225,3 +243,40 @@ layout improved safety, usability, and maintenance while keeping the full system
 
 
 ## Test Results 
+
+To begin testing and demonstration of the plant monitoring system, the emitter tubing and soil moisture sensor were placed inside the plant pot as shown below in Figure 10. 
+This setup allowed the system to monitor soil moisture levels and automatically deliver water when dry soil conditions were detected.
+
+![Plant Pot Tubing Setup](./BAE305_Plant_Pot_Tubing_Setup.jpg)
+
+*Figure 10. Plant pot and emitter tubing setup used to evenly distribute water around the plant.*
+
+For demonstration purposes, the soil moisture sensor was programmed to check soil moisture every 30 seconds rather than the normal operating interval of every 10 minutes. 
+When the sensor detected dry soil conditions, the system activated the watering cycle. This was indicated by the LED changing to the watering status color, and the diaphragm 
+pump began delivering water through the emitter tubing. The increase in soil moisture around the emitter tube during watering is shown in Figure 11.
+
+![Watering Progress](./BAE305_Board2_Watering_Progress.jpg)
+
+*Figure 11. Water being delivered from the emitter tubing to the plant soil during the watering cycle.*
+
+During the demonstration, the plant was watered for 5 seconds rather than the normal 10-second watering cycle used during standard operation. After watering was completed, 
+the system waited 1 minute before taking another moisture reading. This delay allowed time for the water to properly absorb into the soil and prevented false moisture 
+readings immediately after watering. Once the soil reached the appropriate moisture level, the system recognized the acceptable condition and the LED changed to green, as 
+shown in Figure 12, indicating that the plant had sufficient moisture and no additional watering was needed.
+
+![Board 2 Green LED](./BAE305_Board2_GreenLED.jpg)
+
+*Figure 12. Green LED indicator showing that the soil moisture is at an acceptable level.*
+
+For temperature monitoring, the acceptable temperature range was manually set around the current room temperature for demonstration purposes using the LCD screen an 
+pushbutton controls. The thermistor continuously measured the ambient air temperature and displayed both the measured temperature and the user-selected temperature range on 
+the LCD screen. To test the alert system, the thermistor was manually warmed until the measured temperature moved outside the acceptable temperature range. Once the 
+temperature exceeded the selected limits, the piezo buzzer activated and continued sounding until the thermistor cooled and returned to the acceptable range.
+
+This demonstration process is summarized and shown in the demonstration video below. The testing was successful, and the project demonstrated that all design objectives were 
+successfully met, including soil moisture detection, automatic watering, system status indication, user temperature input, and temperature alert notification.
+
+
+[![Click to View Demonstration Video](./video-preview-image.jpg)](./your-video-file.mp4)
+
+*Click the image above to watch the full demonstration video of the plant monitoring system in operation.*
