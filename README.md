@@ -71,13 +71,16 @@ Serial Interface Adapter Module, three pushbuttons, Backery Pack that holds 4 AA
 The complete schematic, wiring diagram, and code for Board 1 provide all electrical connections and programming necessary for proper assembly, and system operation.
 
 [![Board 1 Temperature Schematic](./BAE305_Schematic_Board1_Tempature.drawio.png)](./BAE305_Schematic_Board1_Tempature.drawio.png)
+
 *Figure 1. Circuit schematic for Board 1 showing the temperature monitoring system with LCD display, pushbuttons, piezo buzzer, thermistor, and resistor connections.*
 
 [![Board 1 Temperature Wiring Diagram](./Wire_Diagram_Board1_Temp.png)](./Wire_Diagram_Board1_Temp.png)
+
 *Figure 4. Physical wiring diagram for Board 1 showing the full component layout and breadboard connections for the temperature monitoring system with LCD display, 
 pushbuttons, piezo buzzer, and thermistor.*
 
 *Board 1 Arduino Code – Temperature Monitoring System*
+
 [Click here to view the code file](./BAE305_Board1_Tempature_Code)
 
 
@@ -90,14 +93,17 @@ The complete schematic, wiring diagram, and code for Board 2 provide the necessa
 operation.
 
 [![Board 2 Moisture Schematic](./BAE305_Schematic_Board2_Moisture.drawio.png)](./BAE305_Schematic_Board2_Moisture.drawio.png)
+
 *Figure 2. Circuit schematic for Board 2 showing the soil moisture monitoring system with RGB LED, soil moisture sensor, relay module, diaphragm pump, and battery pack 
 connections.*
 
 [![Board 2 Moisture Wiring Diagram](./Wire_Diagram_Board2_Moisture.png)](./Wire_Diagram_Board2_Moisture.png)
+
 *Figure 3. Physical wiring diagram for Board 2 showing the full component layout and breadboard connections for the soil moisture monitoring and automatic watering system.*
 
  *Board 2 Arduino Code – Moisture Monitoring and Watering System*
-[Click here to view the code file](./incertname of file here)
+ 
+[Click here to view the code file](./incert name of file here)
 
 ## Design Decision Discussion
 
