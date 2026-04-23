@@ -234,7 +234,7 @@ outer wall was added. This wall was kept at only 1.5 inches tall so the tank cou
 Arduino boards upright, the team designed a T-shaped divider system. The top section of the T extends higher than the water tank to act as a splash barrier between the water 
 and electronics. The vertical section of the T inside the tray allows one Arduino board to be mounted on each side.Board 1, watering system, was positioned closest to the 
 plant because it contains the pump connections, tubing, and soil moisture sensor. Board 2, temperature monitoring and user interface, was placed on the outward-facing side so 
-the user could easily view the LCD screen and access the pushbuttons for temperature input. All componets except the water tank are hled in place iwht velcro tape. This 
+the user could easily view the LCD screen and access the pushbuttons for temperature input. All componets except the water tank are held in place with velcro tape. This 
 layout improved safety, usability, and maintenance while keeping the full system compact and organized.
 
 ## Test Results Discussion
@@ -249,6 +249,7 @@ layout improved safety, usability, and maintenance while keeping the full system
 > *put ur info in the desinated board section below*
  
 ### Adurino Board 1: Tempature Sensor and Screen
+
 
 
 ### Audurino Board 2: Mositure Sensor and Water Pump
