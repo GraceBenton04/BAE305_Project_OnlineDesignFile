@@ -1,0 +1,70 @@
+#include <math.h>
+
+const int thermistorPin = A0;
+const int buzzerPin = 6;
+
+float lowTemp = 0.0;
+float highTemp = 0.0;
+bool lowSet = false;
+bool highSet = false;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(buzzerPin, OUTPUT);
+
+  Serial.println("Enter LOW temperature limit:");
+}
+
+void loop() {
+
+  // --- Read LOW limit ---
+  if (!lowSet && Serial.available() > 0) {
+    lowTemp = Serial.parseFloat();
+    lowSet = true;
+
+    // Clear buffer
+    while (Serial.available() > 0) Serial.read();
+
+    Serial.print("Low limit set to: ");
+    Serial.println(lowTemp);
+    Serial.println("Enter HIGH temperature limit:");
+  }
+
+  // --- Read HIGH limit ---
+  if (lowSet && !highSet && Serial.available() > 0) {
+    highTemp = Serial.parseFloat();
+    highSet = true;
+
+    // Clear buffer
+    while (Serial.available() > 0) Serial.read();
+
+    Serial.print("High limit set to: ");
+    Serial.println(highTemp);
+    Serial.println("Monitoring temperature...");
+  }
+
+  // --- Only monitor once BOTH limits are set ---
+  if (lowSet && highSet) {
+    float tempC = readTemperature();
+
+    Serial.print("Temperature: ");
+    Serial.print(tempC);
+    Serial.println(" °C");
+
+    if (tempC < lowTemp || tempC > highTemp) {
+      tone(buzzerPin, 1000);
+    } else {
+      noTone(buzzerPin);
+    }
+
+    delay(500);
+  }
+}
+
+float readTemperature() {
+  float Vout = analogRead(thermistorPin) * 5.0 / 1023.0;
+  float Rntc = 1000.0 * ((5.0 / Vout) - 1);
+
+  float a = 639.5, b = -0.1332, c = -162.5;
+  return a * pow(Rntc, b) + c;
+}
