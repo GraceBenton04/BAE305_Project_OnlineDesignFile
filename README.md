@@ -193,36 +193,28 @@ tank can also be easily removed from the system for refilling without disturbing
 
 Irrigation Tubing System:
 Emitter tubing was selected to evenly distribute water throughout the plant pot. A flexible 1/4-inch emitter tube with 6-inch hole spacing allows water to be dispersed around 
-the plant rather than concentrated in one location. This improves watering consistency and helps provide more accurate soil moisture sensor readings across the pot. Flexible 
-tubing also allows the system to adapt to different pot sizes and plant types. Clear 3/16-inch inner diameter tubing was selected between the tank and the pump because it 
+the plant rather than concentrated in one location. This ensures a more even watering, prevents localized flooding of the soil in the pot, and helps provide more accurate soil moisture sensor readings. Flexible 
+tubing also allows the system to adapt to different pot sizes and plant types. Clear 3/16-inch inner diameter tubing was selected to bridge between the tank and the pump because it 
 matched the required pump connection size, was flexible for routing, and allowed visual confirmation that water was flowing through the system.
 
 Soil Moisture Sensor:
-An analog soil moisture sensor module was selected because it was highly compatible with the Arduino RedBoard and operated on the same voltage range as the Arduino outputs. 
-Analog readings also allowed the team to create threshold values for dry, moist, and watered soil conditions, improving system control and watering accuracy.
+A capacititive analog soil moisture sensor module was selected because it was highly compatible with the Arduino RedBoard and operated on the same voltage range as the Arduino outputs. 
+Analog readings also allowed the team to create threshold values for dry, moist, and watered soil conditions, improving system control and watering accuracy. A capacitive soil moisture sensor was chosen over a resistive one because, while more expensive, they are less prone to mechanical failure due to corrosion. 
 
 User Status Indicators:
-An RGB common cathode LED was selected to communicate system status to the user. The team wanted the user to quickly understand whether the plant was properly watered, 
-actively being watered, or if the system detected a problem such as a low water tank. The LED color indicators were designed as follows: Green LED = Soil moisture is at an 
-acceptable level and the plant is sufficiently watered, Blue LED = The system is actively watering the plant using the diaphragm pump, Red LED = The soil moisture sensor has 
-detected dry soil for an extended period of time, indicating the water reservoir is likely empty or low. Using one RGB LED allowed all three colors to be displayed using a 
-single component instead of wiring three separate LEDs, reducing wiring complexity and improving overall design simplicity.
+An RGB common cathode LED was selected to communicate system status to the user. In order to let the user know what the watering system was doing, the team wanted the user to quickly understand whether the soil was acceptably moist or 
+actively being watered. The LED color indicators were designed as follows: Green LED = Soil moisture is at an 
+acceptable level and the plant is sufficiently watered and Blue LED = The system is actively watering the plant using the diaphragm pump. Using one RGB LED allowed both colors to be displayed using a 
+single component instead of wiring two separate LEDs, reducing wiring complexity and improving overall design simplicity.
 
 Extra Power Supply:
 A 12V battery pack was selected because the diaphragm pump required 12V power for proper operation. This allowed the pump to operate independently from the Arduino’s lower 
 voltage system while still being controlled through the circuit.
 
 System Operation and Control Decisions:
-For the demonstration, the soil moisture sensor checks the soil moisture every 30 seconds and sends this information to the Arduino RedBoard, although during normal operation 
-it takes readings every 10 minutes. Based on the moisture reading, the system determines whether watering is needed and activates the proper visual indicator using the RGB 
-LED. After watering is completed, the soil moisture sensor waits 1 minute before taking another moisture reading. For demonstration purposes, the plant is watered for 5 
-seconds, while under normal operation the watering cycle runs for 10 seconds. When dry soil is detected, the Arduino sends a signal to the relay module, which controls power 
-to the 12V diaphragm pump. The relay allows the low-voltage Arduino board to safely control the higher voltage pump system. The pump then delivers water to the plant until 
-the moisture level is restored.
-
-> *Note: Ada when you where talking about how and when the water runs wiht when is sens with the senor this is where u eaplin it in the System Operation and Control Decisions 
-above. Wether you keep the wording I wrote while u where talking idc but I woudl keep a note on what we changeit do for our dementration. **please deleate this after it is 
-done*
+For the in-class demonstration, the soil moisture sensor checked the soil moisture every 30 seconds to send this information to the Arduino RedBoard, although during normal operation 
+it takes readings every 10 minutes. Based on the moisture reading, the system determines whether soil is dry or not and activates the proper visual indicator using the RGB 
+LED. After one ten-second watering is completed (5 seconds for the demonstration), the soil moisture sensor waits 1 minute (30 seconds for the demonstration) before taking another moisture reading. When the read soil moisture is under the calibrated moisture percentage threshhold (30% water in this case, determined by using the sensor to measure appropriately moist soil) is detected, the Arduino sends a signal to the relay module, which completes the 12V circuit of the battery and diaphragm pump, allowing the pump to run until 10 seconds later when the Arduino causes the module to open that circuit and cut power to the pump. This relay system allows the low-voltage Arduino board to safely control the higher voltage pump system. Using this, a while-loop dependent on the soil moisture variable in the code allows for the pump to run for 10 seconds, turn off and wait for a minute for the water to soak in, measure the soil moisture, and repeat until the sensor determines that the soil is moist, at which point the while-loop will be terminated, the LED will return to green to indicate an end to the watering process, and the system will wait for 10 minutes before checking the moisture again. 
 
 ### Base
 
