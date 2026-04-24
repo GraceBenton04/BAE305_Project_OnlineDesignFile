@@ -252,7 +252,7 @@ layout improved safety, usability, and maintenance while keeping the full system
 
 The first test we ran when making the temperature sensor and screen system was to make sure our thermistor and buzzer worked. We made the circuit shown below and ran the code for just the thermistor and buzzer system. With this, we saw the thermistor could properly read the temperature, and the buzzer would go off when the temperature was outside of our set range.
 
-[Click here to view the thermistor and buzzer code file](./BAE305_Thermistor_Buzzer_Test_Code)
+[Click here to view the thermistor and buzzer test code](./BAE305_Thermistor_Buzzer_Test_Code)
 
 <img width="806" height="614" alt="image" src="https://github.com/user-attachments/assets/bd8ad334-8c93-48eb-8345-8e8b83fba40a" />
 
@@ -260,7 +260,7 @@ The first test we ran when making the temperature sensor and screen system was t
 
 Next, we tested that our Liquid Crystal Display worked properly. We made a circuit with just our LCD screen and the corresponding adaptor, similar to the circuit shown in Figure 6 without buttons, buzzer, or thermistor. We used a pre-made code from a public GitHub repository and ran it on our circuit. We saw that our screen worked properly, but we did have to use a screwdriver to turn the small turn dial on the LCD. This changed the contrast on the screen making the writing more visible. 
 
-Put LCD code here
+[Click here to view the LCD test code](./I2C_Display.ino)
 
 Lastly, we assembled the full circuit as shown in Figure 6 and ran the code for Arduino Board 1 under the Project Setup and Schematics section. Once we had the proper circuit setup and code, we ran it, and everything worked properly. 
 
