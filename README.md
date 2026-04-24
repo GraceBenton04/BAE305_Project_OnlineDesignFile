@@ -252,7 +252,7 @@ layout improved safety, usability, and maintenance while keeping the full system
 
 The first test we ran when making the temperature sensor and screen system was to make sure our thermistor and buzzer worked. We made the circuit shown below and ran the code for just the thermistor and buzzer system. With this, we saw the thermistor could properly read the temperature, and the buzzer would go off when the temperature was outside of our set range.
 
-Put Thermistor and Buzzer code here
+[Click here to view the thermistor and buzzer code file](./BAE305_Thermistor_Buzzer_Test_Code)
 
 <img width="806" height="614" alt="image" src="https://github.com/user-attachments/assets/bd8ad334-8c93-48eb-8345-8e8b83fba40a" />
 
