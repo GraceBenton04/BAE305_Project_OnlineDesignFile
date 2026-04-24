@@ -258,6 +258,15 @@ Lastly, we assembled the full circuit as shown in Figure 6 and ran the code for 
 
 ### Audurino Board 2: Mositure Sensor and Water Pump
 
+In order to integrate the LED, soil moisture sensor, and pump into the pump system circuit, we had to first make sure each component worked individually. Each test code was performed on the same circuit as the completed circuit. 
+
+[Click here to view the soil moisture sensor test code](./testcode_sensor.ino)
+[Click here to view the LED test code](./testcode_LED.ino)
+[Click here to view the pump test code](./testcode_pump.ino)
+
+While testing the LED and pump were as simple as seeing if they would turn on, there was more of a process to setting up the soil moisture sensor. Since we wanted to evaluate soil based on percent moisture, we had to read the number that the sensor read for dry air and pure water, and then use a map function to map them between 0 and 100 percent. After doing that, we were able to evaluate the moisture of any soil using the sensor and reading it on the serial monitor. In order to determine the soil moisture threshhold, we took a handful of freshly watered soil and measured it to be 30% moist. It should be noted that, if recreated, the numbers obtained by the sensor may differ from sensor to sensor--hence the importance of the map function to get a "percent" of moisture. 
+
+Once each piece was confirmed to work, we ran the code for Arduino Board 2 under the Project Setup and Schematics section and assembled the full circuit as shown in Figure 9. When running the code, it worked properly to measure the moisture, change the LED, and activate the pump. 
 
 ## Test Results 
 
