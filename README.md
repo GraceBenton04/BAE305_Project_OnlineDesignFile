@@ -246,7 +246,7 @@ The first test we ran when making the temperature sensor and screen system was t
 
 [Click here to view the thermistor and buzzer test code](./BAE305_Thermistor_Buzzer_Test_Code)
 
-<img width="806" height="614" alt="image" src="https://github.com/user-attachments/assets/bd8ad334-8c93-48eb-8345-8e8b83fba40a" />
+(./Thermistor_and_buzzer_circuit_from_cirkitdesigner.png)
 
 *Figure 10. Thermistor and buzzer circuit from cirkitdesigner.com*
 
