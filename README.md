@@ -28,7 +28,7 @@ watering plant monitoring system.
 
 | Material / Component | Quantity |
 |---|---:|
-| Walnut Wood | 571 in² |
+| Walnut Wood | 3.47 $Bd. ft$ |
 | Torx Head Screws | 11 |
 | SparkFun RedBoards | 2 |
 | Breadboard | 1 |
@@ -270,7 +270,7 @@ Once each piece was confirmed to work, we ran the code for Arduino Board 2 under
 
 ## Test Results 
 
-To begin testing and demonstration of the plant monitoring system, the emitter tubing and soil moisture sensor were placed inside the plant pot as shown below in Figure 10. 
+To begin testing and demonstration of the plant monitoring system, the emitter tubing and soil moisture sensor were placed inside the plant pot as shown below in Figure 11. 
 This setup allowed the system to monitor soil moisture levels and automatically deliver water when dry soil conditions were detected.
 
 ![Plant Pot Tubing Setup](./BAE305_Plant_Pot_Tubing_Setup.jpg)
@@ -279,7 +279,7 @@ This setup allowed the system to monitor soil moisture levels and automatically 
 
 For demonstration purposes, the soil moisture sensor was programmed to check soil moisture every 30 seconds rather than the normal operating interval of every 10 minutes. 
 When the sensor detected dry soil conditions, the system activated the watering cycle. This was indicated by the LED changing to the watering status color, and the diaphragm 
-pump began delivering water through the emitter tubing. The increase in soil moisture around the emitter tube during watering is shown in Figure 11.
+pump began delivering water through the emitter tubing. The increase in soil moisture around the emitter tube during watering is shown in Figure 12.
 
 ![Watering Progress](./BAE305_Board2_Watering_Progress.jpg)
 
@@ -288,7 +288,7 @@ pump began delivering water through the emitter tubing. The increase in soil moi
 During the demonstration, the plant was watered for 5 seconds rather than the normal 10-second watering cycle used during standard operation. After watering was completed, 
 the system waited 1 minute before taking another moisture reading. This delay allowed time for the water to properly absorb into the soil and prevented false moisture 
 readings immediately after watering. Once the soil reached the appropriate moisture level, the system recognized the acceptable condition and the LED changed to green, as 
-shown in Figure 12, indicating that the plant had sufficient moisture and no additional watering was needed.
+shown in Figure 13, indicating that the plant had sufficient moisture and no additional watering was needed.
 
 ![Board 2 Green LED](./BAE305_Board2_GreenLED.jpg)
 
