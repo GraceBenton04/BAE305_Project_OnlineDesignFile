@@ -246,7 +246,7 @@ The first test we ran when making the temperature sensor and screen system was t
 
 [Click here to view the thermistor and buzzer test code](./BAE305_Thermistor_Buzzer_Test_Code)
 
-!(./Thermistor_and_buzzer_circuit_from_cirkitdesigner.png)
+![Thermistor and Buzzer Circuit](./Thermistor_and_buzzer_circuit_from_cirkitdesigner.png)
 
 *Figure 10. Thermistor and buzzer circuit from cirkitdesigner.com*
 
@@ -275,7 +275,7 @@ This setup allowed the system to monitor soil moisture levels and automatically 
 
 ![Plant Pot Tubing Setup](./BAE305_Plant_Pot_Tubing_Setup.jpg)
 
-*Figure 10. Plant pot and emitter tubing setup used to evenly distribute water around the plant.*
+*Figure 11. Plant pot and emitter tubing setup used to evenly distribute water around the plant.*
 
 For demonstration purposes, the soil moisture sensor was programmed to check soil moisture every 30 seconds rather than the normal operating interval of every 10 minutes. 
 When the sensor detected dry soil conditions, the system activated the watering cycle. This was indicated by the LED changing to the watering status color, and the diaphragm 
@@ -283,7 +283,7 @@ pump began delivering water through the emitter tubing. The increase in soil moi
 
 ![Watering Progress](./BAE305_Board2_Watering_Progress.jpg)
 
-*Figure 11. Water being delivered from the emitter tubing to the plant soil during the watering cycle.*
+*Figure 12. Water being delivered from the emitter tubing to the plant soil during the watering cycle.*
 
 During the demonstration, the plant was watered for 5 seconds rather than the normal 10-second watering cycle used during standard operation. After watering was completed, 
 the system waited 1 minute before taking another moisture reading. This delay allowed time for the water to properly absorb into the soil and prevented false moisture 
@@ -292,7 +292,7 @@ shown in Figure 12, indicating that the plant had sufficient moisture and no add
 
 ![Board 2 Green LED](./BAE305_Board2_GreenLED.jpg)
 
-*Figure 12. Green LED indicator showing that the soil moisture is at an acceptable level.*
+*Figure 13. Green LED indicator showing that the soil moisture is at an acceptable level.*
 
 For temperature monitoring, the acceptable temperature range was manually set around the current room temperature for demonstration purposes using the LCD screen an 
 pushbutton controls. The thermistor continuously measured the ambient air temperature and displayed both the measured temperature and the user-selected temperature range on 
