@@ -303,6 +303,6 @@ This demonstration process is summarized and shown in the demonstration video be
 successfully met, including soil moisture detection, automatic watering, system status indication, user temperature input, and temperature alert notification.
 
 
-[![Click to View Demonstration Video](./video-preview-image.jpg)](./your-video-file.mp4)
+[![Watch demo](demo-thumbnail.png)](demo-video.mp4)
 
 *Click the image above to watch the full demonstration video of the plant monitoring system in operation.*
