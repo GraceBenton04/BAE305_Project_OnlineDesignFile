@@ -168,15 +168,11 @@ also been used in previous coursework, so the team was already familiar with its
 warning system for the user.
 
 System Operation and Control Decisions:
-Using the three pushbuttons the user will input the ideal tempature rang for thier plant. Pushbutton 2 is up by 0.5 degrees Farnhit, pushbutton 3 is down by 0.5 degrees 
-farnhight, and pushbutton 1 uploads imputed temputure range to adurino board. The thermistor continuously measures ambient temperature and sends analog input data to the 
+Using the three pushbuttons the user will input the ideal tempature rang for thier plant. Pushbutton 2 is up by 0.5 degrees Fahrenheit, pushbutton 3 is down by 0.5 degrees 
+Fahrenheit, and pushbutton 1 uploads imputed temputure range to adurino board. The thermistor continuously measures ambient temperature and sends analog input data to the 
 Arduino RedBoard. The Arduino processes this data and displays both the current temperature readings and inputed range. The piezo buzzer provides audible alerts when 
 temperature goes outside of inputed range. This board serves as the main user interface for the plant monitoring system, allowing real-time monitoring of plant conditions 
 while providing feedback through both visual and audible outputs.
-
-> *Note: Cami and Evie I think i got it good on the operation but please add or change to what you guys want. if there is any more explaination that could be given on why we 
-want it coded or run this way please add to the above section or sections if it is better explained on why we chose to use that compent in the circut.**please deleate this 
-after it is done*
 
 ### Audurino Board 2: Mositure Sensor and Water Pump
 
