@@ -226,15 +226,6 @@ the user could easily view the LCD screen and access the pushbuttons for tempera
 layout improved safety, usability, and maintenance while keeping the full system compact and organized.
 
 ## Test Results Discussion
-
- > *This is a note get ride of it when section is complete* 
- > *here is what the rubric says this section is: Could another test engineer replicate your tests? All test equipment specified (model numbers) and procedures fully described. 
- > In this section can each of you say how you tested and debuged the code to get the final working code with the system. Ada for yours maybe more detail or hwo you know the 
->  water pump was working? and def. some info of how you tested reading the data of the sensor and knowing how it outputed its data to then use in the code?*
-> *Grace thinks: My understanding is that we have the layouts and desin and the defense of why we chose to use what and do what now in this section it is explaining what went 
-> wrong or hickups to making it do want we wanted to and then also how did we make sure it ran they way we wanted it.*
-> *If any one has photos of you testing somthing that would be great to add in too! if not its ok this thing is getting long lol*
-> *put ur info in the desinated board section below*
  
 ### Adurino Board 1: Tempature Sensor and Screen
 
